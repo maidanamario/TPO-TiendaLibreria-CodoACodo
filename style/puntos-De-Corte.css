@@ -6,6 +6,11 @@ definir las acciones a relalizar en los puntos de cortes   */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  footer{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
   #main {
     background: red;
     width: 100%;
@@ -16,6 +21,11 @@ definir las acciones a relalizar en los puntos de cortes   */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  footer{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
   #main {
     background: green;
     width: 90%;
@@ -26,6 +36,11 @@ definir las acciones a relalizar en los puntos de cortes   */
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 870px) {
+  footer{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
   #main {
     background: blue;
     width: 90%;
@@ -65,6 +80,11 @@ definir las acciones a relalizar en los puntos de cortes   */
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  footer{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
   #main {
     background: orange;
     width: 80%;
@@ -74,6 +94,11 @@ definir las acciones a relalizar en los puntos de cortes   */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  footer{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
   #main {
     background: pink;
     width: 70%;
