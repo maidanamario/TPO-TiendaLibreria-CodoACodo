@@ -1,12 +1,3 @@
-/*
-  reseteamos todos los stilos del documento
-*/
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
- 
-}
 
 /*
   separomos el logo y la navegación
