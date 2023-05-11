@@ -1,0 +1,27 @@
+
+/* conteneder del grid de los libros*/
+
+.listing {
+	list-style: none;
+  	margin: 0.2em;
+  	display: grid;
+  	gap: 5px;
+  	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.listing li {
+	background-color: white;
+	border: 1px solid #ffe066;
+  	border-radius: 5px;
+  	display: flex;
+  	flex-direction: column;
+}
+.listing .cta {
+	margin-top: auto;
+  	border-top: 1px solid #ffe066;
+  	padding: 2px;
+  	text-align: center;
+}
+.listing .body {
+	padding: 2px;
+}
