@@ -1,17 +1,49 @@
-form.form-example {
-    display: table;
-}
 
-div.form-example {
-    display: table-row;
-}
-
-label,
-input {
-    display: table-cell;
-    margin-bottom: 10px;
-}
-
-label {
-    padding-right: 10px;
-}
+  
+  form {
+    max-width: 200px;
+  }
+  
+  p * {
+    display: block;
+  }
+  
+  input.mail {
+    -webkit-appearance: none;
+  
+    width: 100%;
+    border: 1px solid #333;
+    margin: 0;
+  
+    font-family: inherit;
+    font-size: 90%;
+  
+    box-sizing: border-box;
+  }
+  
+  /* Este es nuestro diseño para los campos no válidos */
+  input.invalid{
+    border-color: #900;
+    background-color: #FDD;
+  }
+  
+  input:focus.invalid {
+    outline: none;
+  }
+  
+  /* Este es el diseño para nuestros mensajes de error */
+  .error {
+    width : 100%;
+    padding: 0;
+  
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+  }
+  
+  .error.active {
+    padding: 0.3em;
+  }
+  
