@@ -5,12 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
 	<title>TPO-CODO A CODOS</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style/generales.css">
 	<link rel="stylesheet" href="style/menu-desplegable.css">
 	<link rel="stylesheet" href="style/slider.css">
 	<link rel="stylesheet" href="style/contenedorGrid.css">
 	<link rel="stylesheet" href="style/puntos-De-Corte.css">
 	<link rel="stylesheet" href="style/footer.css">
+	<link rel="stylesheet" href="style/form.css">
+	<link rel="stylesheet" href="style/estilos.css">
+
 </head>
 <body>
 	<div id="contenedor">
@@ -223,51 +227,46 @@
 
 		<!--//  footer   //-->
 		<footer>
-			<div class=”footer-content”>
-				<h3>Foolish Developer</h3>
-				<p>Foolish Developer —  source code.</p>
-				<ul class=”socials”>
-					<li><a href=”#”><i class=”fa fa-facebook”></i></a></li>
-					<li><a href=”#”><i class=”fa fa-twitter”></i></a></li>
-					<li><a href=”#”><i class=”fa fa-google-plus”></i></a></li>
-					<li><a href=”#”><i class=”fa fa-youtube”></i></a></li>
-					<li><a href=”#”><i class=”fa fa-linkedin-square”></i></a></li>
-				 </ul>
-				 <div class=”footer-bottom”>
-					<p>copyright &copy;2021 <a href=”#”>foolishdeveloper</a>  </p>
-					<div class=”footer-menu”>
-						<ul class=”f-menu”>
-						   <li><a href=””>Home</a></li>
-						   <li><a href=””>About</a></li>
-						   <li><a href=””>Contact</a></li>
-						   <li><a href=””>Blog</a></li>
-						</ul>
-					   </div>
-				 </div>
-			</div>
 			<div id="foo-header" >	
-				<p>info envio</p>
-				<p>medios de pago</p>
-
+				
 			</div>
 			<div id="foo-medio">
-				<div>
-					<p>redes sociales</p>
-					<form>
-						<p>
-							<label for="mail">
-								<span>Supcríbite, con tu correo electrónico: </span>
-								<input type="text" class="mail" id="mail" name="mail">
-								<span class="error" aria-live="polite"></span>
-							</label>
-						</p>
-						<!-- Algunos navegadores con compatibilidad heredada deben tener el atributo «type»
-							establecido explícitamente en el elemento «button» de «submit»-->
-						<button type="submit">Enviar</button>
-					</form>
+				<form action="" class="formulario" id="formulario">
 
-				</div>
-				
+					<h3>
+						Supcribite
+					</h3>
+
+					<!-- Grupo: Nombre -->
+					<div class="formulario__grupo" id="grupo__nombre">
+						<label for="nombre" class="formulario__label">Nombre</label>
+						<div class="formulario__grupo-input">
+							<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+							<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						</div>
+						<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+					</div>
+
+					<!-- Grupo: Correo Electronico -->
+					<div class="formulario__grupo" id="grupo__correo">
+						<label for="correo" class="formulario__label">Correo Electrónico</label>
+						<div class="formulario__grupo-input">
+							<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+							<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						</div>
+						<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+					</div>
+					<!-- // -->
+
+					<div class="formulario__mensaje" id="formulario__mensaje">
+						<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+					</div>
+
+					<div class="formulario__grupo formulario__grupo-btn-enviar">
+						<button type="submit" class="formulario__btn">Enviar</button>
+						<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+					</div>
+				</form>
 			</div>
 			<div id="foo-footer">
 				<div id="dev-company" >
@@ -277,11 +276,14 @@
 				
 			</div>	
 		</footer>
+
 		
 	</div>
 
 	<script src="js/menu.js" type="text/javascript" charset="utf-8" async defer></script>
-	<script src="js/validacionFormulario.js" type="text/javascript" charset="utf-8" async defer></script>
+	<!--<script src="js/validarFormulario.js" type="text/javascript" charset="utf-8" async defer></script>-->
+	<script src="js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	
 </body>
 </html>
