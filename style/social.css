@@ -1,46 +1,18 @@
-/*
-Estilos de footer 
-*/
 
-#foo-header{
-	width: 100%;
-	height: auto;
-	border-color: #ecf0f1;
-	background-color: whitesmoke;
-	
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
 }
 
-#foo-medio{
-	width: 100%;
-	height: auto;
-	background-color: #999999;
-}
-div + p{
-	margin-top: 5px auto;
-}
-
-
-
-#foo-footer{
-	/*text-align: center;*/
-	width: 100%;
-	height: auto;
-	background-color: #454545;
-
-}
-#foo-footer div p{
-	text-align: center;
-	text-decoration: none;
-	color: white;
-}
-
-/* footer redes sociales */
-
-.sociales {
+body {
+  background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgba(11,218,81,1) 0%, rgba(0,191,255,1) 90% );
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .buttons {
   min-width: 700px;
   display: flex;

@@ -9,7 +9,8 @@
  
 }
 body{
-	background-color: dimgrey;
+	background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgba(11,218,81,1) 0%, rgba(0,191,255,1) 90% );
+	
 	font-family: Arial, sans-serif;
 }
 
