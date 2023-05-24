@@ -6,14 +6,17 @@ Estilos de footer
 	width: 100%;
 	height: auto;
 	border-color: #ecf0f1;
-	background-color: whitesmoke;
-	
+	background-color: #999999;
+}
+
+#foo-header p{
+	font-size: 14px;
 }
 
 #foo-medio{
 	width: 100%;
 	height: auto;
-	background-color: #999999;
+	background-color: gray;
 }
 div + p{
 	margin-top: 5px auto;
@@ -25,6 +28,7 @@ div + p{
 	width: 100%;
 	background-color: #454545;
 	justify-content: space-around;
+	height: 400px;
 }
 
 .divisor{

@@ -12,12 +12,14 @@
   width: 100%;
   z-index: 1040;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-sizing: border-box;
 }
 
 .main-logo{
   color: black;
-  font-size: 32px;
+  font-size: 20px;
   text-decoration: none;
+  
 }
 
 /*

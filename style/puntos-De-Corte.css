@@ -12,7 +12,7 @@ definir las acciones a relalizar en los puntos de cortes   */
     margin-left: auto;
   }
   #main {
-    background: red;
+    background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
     width: 100%;
     margin-right: auto;
     margin-left: auto;}
@@ -27,7 +27,7 @@ definir las acciones a relalizar en los puntos de cortes   */
     margin-left: auto;
   }
   #main {
-    background: green;
+    background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
     width: 90%;
     margin-right: auto;
     margin-left: auto;}
@@ -42,7 +42,7 @@ definir las acciones a relalizar en los puntos de cortes   */
     margin-left: auto;
   }
   #main {
-    background: blue;
+    background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
     width: 90%;
     margin-right: auto;
     margin-left: auto;
@@ -86,7 +86,7 @@ definir las acciones a relalizar en los puntos de cortes   */
     margin-left: auto;
   }
   #main {
-    background: orange;
+    background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
     width: 80%;
     margin-right: auto;
     margin-left: auto;}
@@ -100,7 +100,7 @@ definir las acciones a relalizar en los puntos de cortes   */
     margin-left: auto;
   }
   #main {
-    background: pink;
+    background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
     width: 70%;
     margin-right: auto;
     margin-left: auto;}

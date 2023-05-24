@@ -6,16 +6,19 @@
 	list-style: none;
   	margin: 0.2em;
   	display: grid;
-  	gap: 5px;
+  	gap: 10px;
   	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 .listing li {
-	background-color: white;
 	border: 1px solid #ffe066;
   	border-radius: 5px;
   	display: flex;
   	flex-direction: column;
+  	padding: 10px;
+}
+.listing li img{
+	box-shadow: 3px 0px 30px rgb(163, 163, 163);
 }
 .listing .cta {
 	margin-top: auto;
@@ -26,3 +29,5 @@
 .listing .body {
 	padding: 2px;
 }
+
+
