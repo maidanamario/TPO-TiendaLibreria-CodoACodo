@@ -30,6 +30,7 @@ const validarFormulario = (e) => {
 	}
 }
 /* funcion para validar los campos*/
+
 const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
@@ -47,37 +48,19 @@ const validarCampo = (expresion, input, campo) => {
 		campos[campo] = false;
 	}
 }
-/*
-const validarPassword2 = () => {
-	const inputPassword1 = document.getElementById('password');
-	const inputPassword2 = document.getElementById('password2');
 
-	if(inputPassword1.value !== inputPassword2.value){
-		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__password2 i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
-		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
-		campos['password'] = false;
-	} else {
-		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle');
-		document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
-		campos['password'] = true;
-	}
-}
-*/
+
 inputs.forEach((input) => {
-	input.addEventListener('keyup', validarFormulario);
-	input.addEventListener('blur', validarFormulario);
+	input.addEventListener('keyup', validarFormulario);// al soltar la tecla
+	input.addEventListener('blur', validarFormulario); // al dar un clik fuera del input
 });
+/*
+
+//--- validacion sin la API-----//
 
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	const terminos = document.getElementById('terminos');
 	if(campos.nombre && campos.correo ){
 		formulario.reset();
 
@@ -89,6 +72,9 @@ formulario.addEventListener('submit', (e) => {
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
 		});
+		//---consulto la Api---//
+		
+		//------//
 	} else {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 		setTimeout(() => {
@@ -96,3 +82,55 @@ formulario.addEventListener('submit', (e) => {
 		}, 5000);
 	}
 });
+
+*/
+//--- consulta ascnc api DE FORMSPREE ---//
+
+async function handleSubmit(event) {
+	event.preventDefault();
+	var data = new FormData(event.target);
+	if (campos.nombre && campos.correo) {
+	fetch(event.target.action, {
+		method: formulario.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+      	if (response.ok) {
+        formulario.reset()
+        document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+        setTimeout(() => {
+			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+		}, 5000);
+		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+			icono.classList.remove('formulario__grupo-correcto');
+		});
+        //alert( 'msj enviado OK')
+        console.log('msj OK!');
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+            	document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+            	setTimeout(() => {
+			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+		}, 5000);
+              console.log( 'msj ERROR !!');
+            } else {
+              alert("Oops! There was a problem submitting your form") 
+            }
+          })
+        }
+      }).catch(error => {
+        alert("Oops! There was a problem submitting your form")
+      });
+    }else{
+    	document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+            	setTimeout(() => {
+			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+		}, 5000);
+    	console.log('rellenar los campos');
+
+    }}
+
+    formulario.addEventListener('submit', handleSubmit)
