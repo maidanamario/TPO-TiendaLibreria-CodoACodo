@@ -65,6 +65,7 @@ function renderizarProductos() {
         // Body
         const miNodoCardBody = document.createElement('div');
         miNodoCardBody.classList.add('body');
+        miNodoCardBody.classList.add('cta');
 
         // Titulo
         const miNodoTitle = document.createElement('p');
@@ -72,11 +73,13 @@ function renderizarProductos() {
 
         // Precio
         const miNodoPrecio = document.createElement('p');
-        miNodoPrecio.textContent = `${info.precio}${divisa}`;
+        miNodoPrecio.textContent = `${divisa}${info.precio}`;
 
         // div boton
         const miNodoCta = document.createElement('div');
-        miNodoCardBody.classList.add('cta');
+        miNodoCta.setAttribute('id', 'btnAddCarrito');
+        miNodoCta.classList.add('cta');
+        miNodoCta.classList.add('justificarContnido')
 
         // Boton 
         const miNodoBoton = document.createElement('button');
