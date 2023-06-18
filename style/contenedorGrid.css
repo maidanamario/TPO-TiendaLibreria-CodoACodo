@@ -20,9 +20,12 @@
 .listing li img{
 	box-shadow: 3px 0px 30px rgb(163, 163, 163);
 }
+#btnAddCarrito button{
+	padding: 6px 4px;
+}
 .listing .cta {
 	margin-top: auto;
-  	border-top: 1px solid #ffe066;
+  	/*border-top: 1px solid #ffe066;*/
   	padding: 2px;
   	text-align: center;
 }
@@ -30,4 +33,8 @@
 	padding: 2px;
 }
 
-
+.justificarContnido{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
