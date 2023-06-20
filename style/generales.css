@@ -9,7 +9,7 @@
  
 }
 body{
-	background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgba(11,218,81,1) 0%, rgba(0,191,255,1) 90% );
+	background: #f4f6f6;
 	font-family: Arial, sans-serif;
 	font-family: 'Nanum Gothic', sans-serif;
 }
@@ -30,12 +30,9 @@ body{
 	padding-top: 50px;
 	width: 100%;
 	height: auto;/* definir auto */
-	background: #d53369;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #cbad6d, #d53369);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #cbad6d, #d53369); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 	
 }
+
 footer{
 
 }
