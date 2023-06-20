@@ -51,16 +51,20 @@ const baseDeDatos = [
 const DOMul = document.querySelector('#items');
 const divisa = '$';
 /**
- * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
+ * Dibuja todos los productos a partir de la base de datos. 
  */
 function renderizarProductos() {
     baseDeDatos.forEach((info) => {
-        // Estructura
+        // Estructura de tag
         const miNodo = document.createElement('li');
+
+        // CONTEN IMG
+        const miNodoContenImg = document.createElement('div')
 
         // Imagen
         const miNodoImagen = document.createElement('img');
         miNodoImagen.setAttribute('src', info.imagen);
+        miNodoImagen.classList.add('zoom');
 
         // Body
         const miNodoCardBody = document.createElement('div');
@@ -90,8 +94,10 @@ function renderizarProductos() {
         // Insertamos
         miNodoCardBody.appendChild(miNodoTitle);
         miNodoCardBody.appendChild(miNodoPrecio);
+        miNodoContenImg.appendChild(miNodoImagen)
         miNodoCta.appendChild(miNodoBoton);
-        miNodo.appendChild(miNodoImagen);
+        miNodo.appendChild(miNodoContenImg)
+        //miNodo.appendChild(miNodoImagen);
         miNodo.appendChild(miNodoCardBody);
         miNodo.appendChild(miNodoCta);
         DOMul.appendChild(miNodo);

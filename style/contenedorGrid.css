@@ -11,21 +11,36 @@
 }
 
 .listing li {
-	border: 1px solid #ffe066;
+	background:#fdfefe;
+	border: 1px solid #0066FF;
   	border-radius: 5px;
   	display: flex;
   	flex-direction: column;
-  	padding: 10px;
+  	padding: 5px;
+  	
+}
+.listing li div{
+	overflow: hidden;
+	width: 100%;
 }
 .listing li img{
-	box-shadow: 3px 0px 30px rgb(163, 163, 163);
+	object-fit: cover;
 }
+
+.zoom {
+    transition: transform .2s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.1); 
+}
+
+
 #btnAddCarrito button{
 	padding: 6px 4px;
 }
 .listing .cta {
 	margin-top: auto;
-  	/*border-top: 1px solid #ffe066;*/
   	padding: 2px;
   	text-align: center;
 }
