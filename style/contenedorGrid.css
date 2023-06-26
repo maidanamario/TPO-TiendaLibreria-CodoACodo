@@ -25,6 +25,7 @@
 }
 .listing li img{
 	object-fit: cover;
+	width: 100%;
 }
 
 .zoom {

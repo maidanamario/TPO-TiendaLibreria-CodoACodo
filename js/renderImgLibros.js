@@ -3,47 +3,47 @@
 const baseDeDatos = [
     {
         id: 1,
-        titulo: 'Patata',
+        titulo: '1,000 Places to See Before You Die',
         precio: 1000,
-        imagen: 'img/descarga1.jpg'
+        Image_URL_L: 'http://images.amazon.com/images/P/0716733897.01.LZZZZZZZ.jpg'
     },
     {
         id: 2,
         titulo: 'Cebolla',
         precio: 1200,
-        imagen: 'img/descarga2.jpg'
+        Image_URL_L: 'http://images.amazon.com/images/P/0155001736.01.LZZZZZZZ.jpg'
     },
     {
         id: 3,
         titulo: 'Calabacin',
         precio: 2100,
-        imagen: 'img/descarga1.jpg'
+        Image_URL_L: 'http://images.amazon.com/images/P/0375703764.01.LZZZZZZZ.jpg'
     },
     {
         id: 4,
         titulo: 'Fresas',
         precio: 1600,
-        imagen: 'img/descarga2.jpg'
+        Image_URL_L: 'http://images.amazon.com/images/P/1841955485.01.LZZZZZZZ.jpg'
     },
     {
         id: 5,
         titulo: 'Fresas',
         precio: 1600,
-        imagen: 'img/descarga2.jpg'
+        Image_URL_L: 'http://images.amazon.com/images/P/3596222206.01.LZZZZZZZ.jpg'
     }
     ,
     {
         id: 6,
         titulo: 'Fresas',
         precio: 1600,
-        imagen: 'img/descarga2.jpg'
+        Image_URL_L: 'http://images.amazon.com/images/P/0915132370.01.LZZZZZZZ.jpg'
     }
     ,
     {
         id: 7,
         titulo: 'Fresas',
         precio: 1600,
-        imagen: 'img/descarga2.jpg'
+        Image_URL_L: 'http://images.amazon.com/images/P/0801839262.01.LZZZZZZZ.jpg'
     }
 
 ];
@@ -63,7 +63,7 @@ function renderizarProductos() {
 
         // Imagen
         const miNodoImagen = document.createElement('img');
-        miNodoImagen.setAttribute('src', info.imagen);
+        miNodoImagen.setAttribute('src', info.Image_URL_L);
         miNodoImagen.classList.add('zoom');
 
         // Body
