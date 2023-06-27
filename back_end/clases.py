@@ -1,26 +1,43 @@
-
+import conexion_db as conn
 # -------------------------------------------------------------------
 # Definimos la clase "Libro"
 # -------------------------------------------------------------------
 class Libro:
-    def __init__(self, codigo, descripcion, cantidad, precio):
-        self.codigo = codigo
-        self.descripcion = descripcion
+    def __init__(self, id_libro, isbn, titulo, autor, anioPubliacion, editorial, rating, cantidad, precio, url_img_l, url_img_m, url_img_s, stock):
+        self.id_libro    = id_libro
+        self.isbn        = isbn
+        self.titulo      = titulo
+        self.auto        = autor
+        self.anio_Publi  = anioPubliacion
+        self,editorial   = editorial
+        self.rating      = rating
         self.cantidad    = cantidad
         self.precio      = precio
+        self.stock       = stock
+        self.url_img_l   = url_img_l
+        self.url_img_m   = url_img_m
+        self.url_img_s   = url_img_s
 
-    def modificar(self, nueva_descripcion, nueva_cantidad, nuevo_precio):
-        self.descripcion = nueva_descripcion
-        self.cantidad    = nueva_cantidad
-        self.precio      = nuevo_precio
-
+    def modificar(self, n_isbn, n_titulo, n_autor, n_anioPubliacion, n_editorial, n_rating, n_cantidad, n_precio, n_url_img_l, n_url_img_m, n_url_img_s, n_stock):
+        self.isbn        = n_isbn
+        self.titulo      = n_titulo
+        self.auto        = n_autor
+        self.anio_Publi  = n_anioPubliacion
+        self,editorial   = n_editorial
+        self.rating      = n_rating
+        self.cantidad    = n_cantidad
+        self.precio      = n_precio
+        self.stock       = n_stock
+        self.url_img_l   = n_url_img_l
+        self.url_img_m   = n_url_img_m
+        self.url_img_s   = n_url_img_s
 # -------------------------------------------------------------------
 # Definimos la clase "Usuario"
 # -------------------------------------------------------------------
-class Usuari(object):
+class Usuario(object):
     """docstring for Usuari"""
     def __init__(self, id_usuario, nombre,apellido, email, ciudad, domicilio, telefono):
-        super(Usuari, self).__init__()
+        super(Usuario, self).__init__()
         self.id_usuario = id_usuario
         self.nombre     = nombre
         self.apellido   = apellido
@@ -36,7 +53,7 @@ class Usuari(object):
         self.ciudad    = n_ciudad
         self.domicilio = n_domicilio
         self.telefono  = n_telefono
-        pass
+        
 
 
 # -------------------------------------------------------------------
@@ -44,11 +61,11 @@ class Usuari(object):
 # -------------------------------------------------------------------
 class Inventario:
     def __init__(self):
-        self.conexion = get_db_connection()
+        self.conexion = conn.get_db_connection()
         self.cursor = self.conexion.cursor()
 
     def agregar_Libro(self, codigo, descripcion, cantidad, precio):
-        Libro_existente = self.consultar_Libro(codigo)
+        Libro_existente = self.conn.consultar_Libro(codigo)
         if Libro_existente:
             return jsonify({'message': 'Ya existe un Libro con ese código.'}), 400
 
@@ -98,12 +115,12 @@ class Inventario:
 # -------------------------------------------------------------------
 class Carrito:
     def __init__(self):
-        self.conexion = get_db_connection()
+        self.conexion = conn.get_db_connection()
         self.cursor = self.conexion.cursor()
         self.items = []
 
     def agregar(self, codigo, cantidad, inventario):
-        Libro = inventario.consultar_Libro(codigo)
+        Libro = inventario.conn.consultar_Libro(codigo)
         if Libro is None:
             return jsonify({'message': 'El Libro no existe.'}), 404
         if Libro.cantidad < cantidad:
