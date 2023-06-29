@@ -1,6 +1,9 @@
 from flask import Flask,  jsonify, request
+from flask_mysqldb import MySQL
 #from flask_cors import CORS
 from clases import Carrito, Inventario
+
+from config import config
 
 
 
@@ -12,8 +15,26 @@ app = Flask(__name__)
 '''
 CORS(app)'''
 
+# -------------------------------------------------------------------
+# Conexion con la base de datos
+# -------------------------------------------------------------------
+conexion = MySQL(app)
+
+
 carrito = Carrito()         # Instanciamos un carrito
 inventario = Inventario()   # Instanciamos un inventario
+
+
+#ruta para el login del administrador
+@app.route('/login')
+def login():
+    try:
+        return "OK"
+    except Exception as e:
+        raise "Error"
+    pass
+
+
 
 
 # Ruta para obtener los datos de un libro según su código
@@ -86,4 +107,5 @@ def index():
 
 # Finalmente, si estamos ejecutando este archivo, lanzamos app.
 if __name__ == '__main__':
+    app.config.from_object(config['development'])
     app.run()
