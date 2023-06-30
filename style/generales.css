@@ -1,7 +1,6 @@
 
-/*
-  reseteamos todos los stilos del documento
-*/
+/*  Reseteamos todos los stilos del documento */
+
 * {
   padding: 0;
   margin: 0;
@@ -24,6 +23,7 @@ body{
 	position: fixed;
 	top: 1px;
 	z-index: 1000;
+	background-color: rgb(251, 236, 236);
 }
 
 #main{
