@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+	<title>Corazon Delator</title>
+	<!--   FONTS -->
+	<link rel="icon" href="img/Books.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="style/generales.css">
+	<link rel="stylesheet" href="style/menu-desplegable.css">
+	<link rel="stylesheet" href="style/slider.css">
+	<link rel="stylesheet" href="style/contenedorGrid.css">
+	<link rel="stylesheet" href="style/puntos-De-Corte.css">
+	<link rel="stylesheet" href="style/footer.css">
+	<link rel="stylesheet" href="style/form.css">
+	<link rel="stylesheet" href="style/estilos.css">
+
+</head>
+<body>
+	<div id="contenedor">
+		<!--//   nav y hader   //-->
+		<div id="head-nav"  >
+			 <header class="main-header">
+			 	<div class="main-logo">
+					<img src="img/LogoECD.png" alt="El Corazon Delator" height="100">
+				</div>
+				<!-- <img class="main-logo" href="img/LogoELD.png">Corazon Delator</img> -->
+
+				 <nav id="nav" class="main-nav">
+				 	<div class="nav-links">
+			          <a class="link-item" href="#main"><i class="fa-solid fa-house fa-lg"></i></a>
+			          <a class="link-item" href="#">Sobre Nosotros</a>
+			          <!-- <a class="link-item" href="#contenedor-grid">Libros</a> -->
+			          <a class="link-item" href="#foo-header">Contacto</a>
+					  <a class="link-item" href="#search"><input type="text" width="10%" placeholder="Search..."><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+			        </div>
+			     </nav>
+			      <button id="button-menu" class="button-menu">
+			        <span></span>
+			        <span></span>
+			        <span></span>
+			      </button>
+		     </header> 
+		</div><!-- Fin Header y Menu desplegable-->
+
+		<!--//    main    //-->
+		<div id="main" >
+
+			<!-- Carrousel-->
+			<div class="slider-frame">
+		        <ul>
+					<li><img src="img/bibliotecas-del-mundo-3.jpg" alt="">
+					<b>Biblioteca Girolamini (Nápoles, Italia)</b></li>
+		            <li><img src="img/bibliotecas-del-mundo-4.jpg" alt=""><b>Biblioteca de la Abadía de Waldsassen (Alemania)</b></li>
+		            <li><img src="img/bibliotecas-del-mundo-7.jpg" alt=""><b>Real Biblioteca del Monasterio de El Escorial (Madrid, España)</b></li>
+		            <li><img src="img/bibliotecas-del-mundo-8.jpg" alt=""><b>Biblioteca de la casa museo de John Pierpont Morgan (Nueva York)</b></li>
+		        </ul>
+		    </div>
+		    <!-- fin  carrousel -->
+			
+			<!-- contenedor del grid de libros-->
+			<div id="contenedor-grid" >
+				<ul id="items" class="listing"></ul>
+			</div>
+
+		</div><!-- fin main-content-->
+
+		<!--//  footer   //-->
+		<footer>
+			<div id="foo-header" >	
+				<h3>Contacto</h3>
+				<p>Si tenés alguna consulta o necesitás que te recomendemos algún libro, podés escribirnos y te responderemos a la brevedad. VENDEMOS Y RECOMENDAMOS LOS LIBROS QUE AMAMOS. ♥</p>
+				
+			</div>
+			<div id="foo-medio">
+				<form action="https://formspree.io/f/xayzzqpo" method="POST" class="formulario" id="formulario">
+
+					<h3>
+						¡Suscribite y recibí nuestras novedades!
+					</h3>
+
+					<!-- Grupo: Nombre -->
+					<div class="formulario__grupo" id="grupo__nombre">
+						<label for="nombre" class="formulario__label">Nombre</label>
+						<div class="formulario__grupo-input">
+							<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+							<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						</div>
+						<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+					</div>
+
+					<!-- Grupo: Correo Electronico -->
+					<div class="formulario__grupo" id="grupo__correo">
+						<label for="correo" class="formulario__label">Correo Electrónico</label>
+						<div class="formulario__grupo-input">
+							<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+							<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						</div>
+						<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+					</div>
+					<!-- // -->
+
+					<div class="formulario__mensaje" id="formulario__mensaje">
+						<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+					</div>
+
+					<div class="formulario__grupo formulario__grupo-btn-enviar">
+						<button type="submit" class="formulario__btn">Enviar</button>
+						<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+					</div>
+				</form>
+			</div>
+			<div id="foo-footer">
+				<section class="buttons sociales">
+			      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+			      <a href="#" ><i class="fa-brands fa-square-youtube"></i></a>
+			      <a href="#" ><i class="fa-brands fa-google-plus-g" ></i></a>
+			      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+			      <a href="#"><i class="fa-brands fa-twitter" ></i></a>
+			    </section>
+			    <div class="divisor"></div>
+				<div class="foo_small">
+					<p class="footer__small-text"> © 2023 Corazon delator </p>
+					<p class="footer__small-text">Designed and built by <a href="#" target="_blank">Grupo Codo a Codo</a></p>
+				</div>
+				
+			</div>	
+		</footer>
+
+		
+	</div>
+	<!--------------//  script  //-------------------------------->
+	<script src="js/menu.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="js/formulario.js"></script>
+	<script src="js/renderImgLibros.js"></script>
+	<!--script>-->
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	
+</body>
+</html>
