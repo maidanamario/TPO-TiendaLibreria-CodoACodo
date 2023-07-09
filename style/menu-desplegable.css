@@ -1,6 +1,6 @@
 
 /*
-  separomos el logo y la navegación
+  separamos el logo y la navegación
 */
 .main-header{
   height: 95px;
@@ -27,8 +27,8 @@
 */
 
 
-/* El nav ocupa el 100% de la pantalla cundo esta abierto.
-   lo mantemos fijo al realizar el scroll
+/* El nav ocupa el 100% de la pantalla cuando esta abierto.
+   lo mantenemos fijo al realizar el scroll.
    con margin-left: -100% escondemos el nav de la ventana principal*/
 .main-nav{
   position: fixed;
@@ -39,8 +39,6 @@
   margin-left: -100%;
   transition: all 0.2s linear;
   z-index: 100;
-  /* background-color: rgb(251, 236, 236); */
-  /* background-color: rgba(0, 0, 0, 0.7); */
 }
 
 /*
@@ -62,6 +60,7 @@
   height: 100%;
   align-items: center;
   justify-content: flex-start;
+  background-color: rgb(251, 236, 236);
 }
 
 .link-item{
@@ -114,7 +113,7 @@
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #444444;
+  background: #344c74;
   border-radius: 3px;
   transform-origin: 4px 0px;
   transition: all 0.2s linear;
@@ -128,7 +127,7 @@
 .button-menu.close span {
   opacity: 1;
   transform: rotate(45deg) translate(0px, 0px);
-  background:#bd1515;
+  background:#fc8494;
 }
 
 .button-menu.close span:nth-child(2) {
