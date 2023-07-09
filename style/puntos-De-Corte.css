@@ -65,7 +65,7 @@ definir las acciones a relalizar en los puntos de cortes   */
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    background: white;
+    background-color: rgb(251, 236, 236);
   }
 
   .link-item {

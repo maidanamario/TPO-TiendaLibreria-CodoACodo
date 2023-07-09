@@ -2,9 +2,12 @@
 
 /* slider 2 */
 .slider-frame {
-	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	width: 50%;
     height: auto;
-	/*margin:5px auto 5px;*/
+	align-items: center;
+	margin:5px auto 5px;
 	overflow: hidden;
 }
 
@@ -12,17 +15,19 @@
 	display: flex;
 	padding: 0;
 	width: 400%;
-	
 	animation: slide 20s infinite alternate ease-in-out;
+	animation: slide 20s i
 }
 
 .slider-frame li {
 	width: 100%;
 	list-style: none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .slider-frame img {
 	width: 100%;
+	max-height: max-content;
 }
 
 @keyframes slide {
