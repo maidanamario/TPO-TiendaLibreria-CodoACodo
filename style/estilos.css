@@ -298,6 +298,78 @@ Estilos para el formulario de contacto
 
 /* :::FIN Ventana-Modal SUSCRIBE::: */
 
+/* :::Ventana-Modal ADMIN::: */
+
+#btn-admin {
+    display: none;
+}
+
+.container-admin {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#btn-admin:checked~.container-admin {
+    display: flex;
+}
+
+.content-admin {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 4px;
+}
+
+.content-admin h2 {
+    margin-bottom: 15px;
+}
+
+.content-admin p {
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.content-admin .btn-cerrar {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-admin .btn-cerrar label {
+    padding: 7px 10px;
+    background-color: #192e53;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-admin .btn-cerrar label:hover {
+    background-color: red;
+}
+
+.cerrar-admin {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* :::FIN Ventana-Modal ADMIN::: */
+
 /* ----- -----  Mediaqueries ----- ----- */
 @media screen and (max-width: 800px) {
     .formulario {

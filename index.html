@@ -41,7 +41,7 @@
 						<a class="link-item boton-contact" href="#contact"><label for="btn-contact"><i class="fa-solid fa-envelope fa-lg"></i></label></a>
 						<a class="link-item" href="#suscribe"><label for="btn-suscribe">Suscríbete!</label></a>
 						<a class="link-item" href="#search"><input type="text" width="10%" placeholder="Buscar título..."><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
-						<a class="link-item" href="#admin"><i class="fa-solid fa-lock fa-lg"></i></a>
+						<a class="link-item" href="#admin"><label for="btn-admin"><i class="fa-solid fa-lock fa-lg"></i></label></a>
 						<a class="link-item" href="#shop"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
 					</div>
 				</nav>
@@ -135,6 +135,40 @@
 				<label for="btn-suscribe" class="cerrar-suscribe"></label>
 			</div>
 			<!-- FIN Ventana Modal SUSCRIBE-->
+
+			<!-- Ventana Modal ADMIN -->
+			<input type="checkbox" id="btn-admin">
+			<div class="container-admin">
+				<div class="content-admin">
+					<h2>Ingreso Administrador</h2>
+					<!-- <p></p><br> -->
+					<form action="mostrar_datos.html" target="_blank">
+						<table>
+							<tr>
+								<td><label for="uname"><b>Usuario: </b></label></td>
+								<td><input type="text" name="uname" required></td>
+							</tr>
+							<tr>
+								<td><label for="psw"><b>Contraseña: </b></label></td>
+								<td><input type="password" name="psw" required></td>
+							</tr>
+							<tr>
+								<!-- <td></td>
+								<td><label><input type="checkbox" checked="checked" name="remember"> Recordarme</label></td> -->
+							</tr>
+							<tr>
+								<td></td>
+								<td><button type="submit">Ingresar</button></td>
+							</tr>
+						</table>
+					</form>
+					<div class="btn-cerrar">
+						<label for="btn-admin"><i class="fa-solid fa-xmark"></i></label>
+					</div>
+				</div>
+				<label for="btn-admin" class="cerrar-admin"></label>
+			</div>
+			<!-- FIN Ventana Modal ADMIN-->
 
 		</div><!-- FIN Header y Menu desplegable-->
 
@@ -230,7 +264,7 @@
 					</section>
 					<!-- <div class="divisor"></div> -->
 					<div class="foo_small">
-						<p class="footer__small-text"><b>© 2023 Corazon Delator</b></p>
+						<p class="footer__small-text"><b>© 2023 El Corazon Delator</b></p>
 						<p class="footer__small-text">Designed and built by Grupo 24 Codo a Codo 2023</p>
 					</div>
 
