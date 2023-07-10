@@ -16,7 +16,7 @@ Estilos de footer
 #foo-medio{
 	width: 100%;
 	height: auto;
-	background-color: gray;
+	background-color: #344c74;
 }
 div + p{
 	margin-top: 5px auto;
@@ -26,9 +26,9 @@ div + p{
 /* footer redes sociales */
 #foo-footer{
 	width: 100%;
-	background-color: #454545;
+	background-color: rgb(251, 236, 236);
 	justify-content: space-around;
-	height: 400px;
+	height: 200px;
 }
 
 .divisor{
@@ -41,14 +41,15 @@ div + p{
 #foo-footer div p{
 	text-align: center;
 	text-decoration: none;
-	color: white;
+	color: #344c74;
 }
 #foo-footer div p a{
-	color: black;
+	color: #344c74;
 }
 #foo-footer section{
 	width: 100%;
 	padding: 20px 0;
+	color: rgb(251, 236, 236);
 }
 
 .sociales {
@@ -59,7 +60,7 @@ div + p{
 }
 .buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .buttons i {

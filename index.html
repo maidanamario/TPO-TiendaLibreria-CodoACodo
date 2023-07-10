@@ -42,6 +42,7 @@
 						<a class="link-item" href="#suscribe"><label for="btn-suscribe">Suscríbete!</label></a>
 						<a class="link-item" href="#search"><input type="text" width="10%" placeholder="Buscar título..."><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
 						<a class="link-item" href="#admin"><i class="fa-solid fa-lock fa-lg"></i></a>
+						<a class="link-item" href="#shop"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
 					</div>
 				</nav>
 				<button id="button-menu" class="button-menu">
@@ -63,15 +64,15 @@
 						<table>
 							<tr>
 								<td align="right"><label for="name">Nombre:</label></td>
-								<td><input type="text" name="name"></td>
+								<td><input type="text" name="name" required></td>
 							</tr>
 							<tr>
 								<td align="right"><label for="mail">Correo electrónico:</label></td>
-								<td><input type="email" name="user_mail"></td>
+								<td><input type="email" name="user_mail" required></td>
 							</tr>
 							<tr>
 								<td align="right"><label for="msg">Mensaje:</label></td>
-								<td> <textarea id="msg" rows="5" cols="21" name="user_message"></textarea></td>
+								<td> <textarea id="msg" rows="5" cols="21" name="user_message" required></textarea></td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
@@ -98,7 +99,7 @@
 						<table>
 							<tr class="formulario__grupo" id="grupo__nombre">
 								<td align="right"><label for="nombre" class="formulario__label">Nombre: </label></td>
-								<td class="formulario__grupo-input"><input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+								<td class="formulario__grupo-input"><input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe" required>
 								<i class="formulario__validacion-estado fas fa-times-circle"></i></td>
 								<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede
 								contener numeros, letras y guion bajo.</p>
@@ -106,7 +107,7 @@
 							<tr class="formulario__grupo" id="grupo__correo">
 								<td align="right"><label for="correo" class="formulario__label">Correo Electrónico: </label></td>
 								<td class="formulario__grupo-input">
-									<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+									<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com" required>
 									<i class="formulario__validacion-estado fas fa-times-circle"></i>
 									<!-- <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos,
 										guiones y guion bajo.</p> -->
@@ -224,16 +225,13 @@
 				</div>
 				<div id="foo-footer">
 					<section class="buttons sociales">
-						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-						<a href="#"><i class="fa-brands fa-square-youtube"></i></a>
-						<a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
-						<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-						<a href="#"><i class="fa-brands fa-twitter"></i></a>
+						<a href="#"><i class="fa-brands fa-facebook-f"></i> - </a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
 					</section>
-					<div class="divisor"></div>
+					<!-- <div class="divisor"></div> -->
 					<div class="foo_small">
-						<p class="footer__small-text"> © 2023 Corazon delator </p>
-						<p class="footer__small-text">Designed and built by <a href="#" target="_blank">Grupo Codo a Codo</a></p>
+						<p class="footer__small-text"><b>© 2023 Corazon Delator</b></p>
+						<p class="footer__small-text">Designed and built by Grupo 24 Codo a Codo 2023</p>
 					</div>
 
 				</div>
