@@ -38,10 +38,9 @@
 				<nav id="nav" class="main-nav">
 					<div class="nav-links">
 						<a class="link-item" href="#main"><i class="fa-solid fa-house fa-lg"></i></a>
-						<a class="link-item" href="#promo">Promociones</a>
-						<a class="link-item" href="#foo-header">Contacto</a>
-						<a class="link-item" href="#search"><input type="text" width="10%" placeholder="Search..."><i
-								class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+						<a class="link-item boton-contact" href="#contact"><label for="btn-contact"><i class="fa-solid fa-envelope fa-lg"></i></label></a>
+						<a class="link-item" href="#suscribe"><label for="btn-suscribe">Suscríbete!</label></a>
+						<a class="link-item" href="#search"><input type="text" width="10%" placeholder="Buscar título..."><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
 						<a class="link-item" href="#admin"><i class="fa-solid fa-lock fa-lg"></i></a>
 					</div>
 				</nav>
@@ -51,6 +50,91 @@
 					<span></span>
 				</button>
 			</header>
+
+			<!-- Ventana Modal CONTACTO -->
+			<input type="checkbox" id="btn-contact">
+			<div class="container-contact">
+				<div class="content-contact">
+					<h2>Esperamos tu mensaje</h2>
+					<p>Si tienes alguna consulta o necesitas que te recomendemos algún libro, dejanos tu mensaje y te responderemos
+						a la
+						brevedad!</p><br>
+					<form action="mostrar_datos.html" target="_blank">
+						<table>
+							<tr>
+								<td align="right"><label for="name">Nombre:</label></td>
+								<td><input type="text" name="name"></td>
+							</tr>
+							<tr>
+								<td align="right"><label for="mail">Correo electrónico:</label></td>
+								<td><input type="email" name="user_mail"></td>
+							</tr>
+							<tr>
+								<td align="right"><label for="msg">Mensaje:</label></td>
+								<td> <textarea id="msg" rows="5" cols="21" name="user_message"></textarea></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center">
+									<input type="submit" value="Enviar">
+								</td>
+							</tr>
+						</table>
+					</form>
+					<div class="btn-cerrar">
+						<label for="btn-contact"><i class="fa-solid fa-xmark"></i></label>
+					</div>
+				</div>
+				<label for="btn-contact" class="cerrar-contact"></label>
+			</div>
+			<!-- FIN Ventana Modal CONTACTO -->
+
+			<!-- Ventana Modal SUSCRIBE -->
+			<input type="checkbox" id="btn-suscribe">
+			<div class="container-suscribe">
+				<div class="content-suscribe">
+					<h2>¡Suscríbete y recibe nuestras novedades!</h2>
+					<p>Te mantendremos al tanto de todas las novedades, ofertas y promociones!!!</p><br>
+					<form action="https://formspree.io/f/xayzzqpo" method="POST" class="formulario" id="formulario">
+						<table>
+							<tr class="formulario__grupo" id="grupo__nombre">
+								<td align="right"><label for="nombre" class="formulario__label">Nombre: </label></td>
+								<td class="formulario__grupo-input"><input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+								<i class="formulario__validacion-estado fas fa-times-circle"></i></td>
+								<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede
+								contener numeros, letras y guion bajo.</p>
+							</tr>
+							<tr class="formulario__grupo" id="grupo__correo">
+								<td align="right"><label for="correo" class="formulario__label">Correo Electrónico: </label></td>
+								<td class="formulario__grupo-input">
+									<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+									<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									<!-- <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos,
+										guiones y guion bajo.</p> -->
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center">
+									<!-- <input type="submit" value="Enviar"> -->
+									<div class="formulario__grupo formulario__grupo-btn-enviar">
+										<button type="submit" class="formulario__btn">Enviar</button>
+										<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<div class="formulario__mensaje" id="formulario__mensaje">
+							<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+								correctamente. </p>
+						</div>
+					</form>
+					<div class="btn-cerrar">
+						<label for="btn-suscribe"><i class="fa-solid fa-xmark"></i></label>
+					</div>
+				</div>
+				<label for="btn-suscribe" class="cerrar-suscribe"></label>
+			</div>
+			<!-- FIN Ventana Modal SUSCRIBE-->
+
 		</div><!-- FIN Header y Menu desplegable-->
 
 		<!--//    main    //-->
@@ -93,20 +177,16 @@
 			<!--//  footer   //-->
 			<footer>
 				<div id="foo-header">
-					<h3>Contacto</h3>
-					<p>Si tienes alguna consulta o necesitas que te recomendemos algún libro, dejanos tu mensaje y te
-						responderemos a la brevedad. VENDEMOS Y RECOMENDAMOS LOS LIBROS QUE AMAMOS. ♥</p>
-
 				</div>
 				<div id="foo-medio">
-					<form action="https://formspree.io/f/xayzzqpo" method="POST" class="formulario" id="formulario">
+					<!-- <form action="https://formspree.io/f/xayzzqpo" method="POST" class="formulario" id="formulario"> -->
 
-						<h3>
+						<!-- <h3>
 							¡Suscribite y recibí nuestras novedades!
-						</h3>
+						</h3> -->
 
 						<!-- Grupo: Nombre -->
-						<div class="formulario__grupo" id="grupo__nombre">
+						<!-- <div class="formulario__grupo" id="grupo__nombre">
 							<label for="nombre" class="formulario__label">Nombre</label>
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="nombre" id="nombre"
@@ -115,10 +195,10 @@
 							</div>
 							<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede
 								contener numeros, letras y guion bajo.</p>
-						</div>
+						</div> -->
 
 						<!-- Grupo: Correo Electronico -->
-						<div class="formulario__grupo" id="grupo__correo">
+						<!-- <div class="formulario__grupo" id="grupo__correo">
 							<label for="correo" class="formulario__label">Correo Electrónico</label>
 							<div class="formulario__grupo-input">
 								<input type="email" class="formulario__input" name="correo" id="correo"
@@ -127,20 +207,20 @@
 							</div>
 							<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos,
 								guiones y guion bajo.</p>
-						</div>
+						</div> -->
 						<!-- // -->
 
-						<div class="formulario__mensaje" id="formulario__mensaje">
+						<!-- <div class="formulario__mensaje" id="formulario__mensaje">
 							<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
 								correctamente. </p>
-						</div>
+						</div> -->
 
-						<div class="formulario__grupo formulario__grupo-btn-enviar">
+						<!-- <div class="formulario__grupo formulario__grupo-btn-enviar">
 							<button type="submit" class="formulario__btn">Enviar</button>
 							<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado
 								exitosamente!</p>
 						</div>
-					</form>
+					</form> -->
 				</div>
 				<div id="foo-footer">
 					<section class="buttons sociales">
