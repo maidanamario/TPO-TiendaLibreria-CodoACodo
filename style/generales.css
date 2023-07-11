@@ -1,15 +1,14 @@
 
-/*
-  reseteamos todos los stilos del documento
-*/
+/*  Reseteamos todos los stilos del documento */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
- 
 }
+
 body{
-	background: #f4f6f6;
+	background: #344c74;
 	font-family: Arial, sans-serif;
 	font-family: 'Nanum Gothic', sans-serif;
 }
@@ -24,10 +23,11 @@ body{
 	position: fixed;
 	top: 1px;
 	z-index: 1000;
+	background-color: #647eaa;
 }
 
 #main{
-	padding-top: 50px;
+	padding-top: 100px;
 	width: 100%;
 	height: auto;/* definir auto */
 	

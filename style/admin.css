@@ -1,0 +1,39 @@
+/* Estilos para la pagina administrador de contacto */
+
+.contenedor-ABM{
+    overflow: hidden;
+    background-color: #9a8162;
+    font-family: Arial;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contenedor-ABM h2{
+    color: #ddd;
+}
+
+.tLibros {
+    border-collapse: collapse;
+    width: 100%;
+    font-size:smaller;
+    background-color: #ddd;
+}
+
+.tLibros th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tLibros th {
+    background-color: #f2f2f2;
+}
+
+/* .tLibros tr:nth-child(even) {
+    background-color: #D6EEEE;
+} */
+
+.tLibros tr:hover {
+    background-color: #D6EEEE;
+}
