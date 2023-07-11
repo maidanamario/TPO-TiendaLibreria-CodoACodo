@@ -5,8 +5,8 @@
     background-color: #9a8162;
     font-family: Arial;
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
 }
 
 .contenedor-ABM h2{
@@ -20,9 +20,17 @@
     background-color: #ddd;
 }
 
-.tLibros th, td {
+.tLibros thead {
+    text-align:center;
+    vertical-align: middle;
+}
+
+.tLibros tbody {
     text-align: left;
-    padding: 8px;
+    font-size: small;
+}
+.tLibros th, td {
+    padding: 15px;
     border-bottom: 1px solid #ddd;
 }
 
