@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+	<title>Corazon Delator</title>
+	<!--   FONTS -->
+	<link rel="icon" href="img/Books.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="style/generales.css">
+	<link rel="stylesheet" href="style/menu-desplegable.css">
+	<link rel="stylesheet" href="style/slider.css">
+	<link rel="stylesheet" href="style/contenedorGrid.css">
+	<link rel="stylesheet" href="style/puntos-De-Corte.css">
+	<link rel="stylesheet" href="style/footer.css">
+	<link rel="stylesheet" href="style/form.css">
+	<link rel="stylesheet" href="style/estilos.css">
+	<link rel="stylesheet" href="style/admin.css">
+
+</head>
+
+<body>
+	<div id="contenedor">
+		<!--//   nav y hader   //-->
+		<div id="head-nav">
+			<header class="main-header">
+				<div class="main-logo">
+					<img src="img/LogoECD.png" alt="El Corazon Delator" height="100">
+				</div>
+				<nav id="nav" class="main-nav">
+					<div class="nav-links">
+						<a class="link-item" href="#main"><i class="fa-solid fa-house fa-lg"></i></a>
+						<a class="link-item" href="#search"><input type="text" width="10%" placeholder="Buscar título..."><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+					</div>
+				</nav>
+				<button id="button-menu" class="button-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</header>
+		</div><!-- FIN Header y Menu desplegable-->
+
+		<!--//    main    //-->
+		<div id="main">
+
+			<!-- contenedor del ABM de libros-->
+			<div id="contenedor-ABM">
+				<h2>Inventario de Libros</h2> <br>
+				<table class="tLibros">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>ISBN</th>
+							<th>Titulo</th>
+							<th>Autor</th>
+							<th>Publicación</th>
+							<th>Editorial</th>
+							<th>Precio</th>
+							<th>Rating</th>
+							<th>Categoria</th>
+							<th>Stock</th>
+							<th>URL Imagen</th>
+							<th>Accion</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>978-1-56619-909-4</td>
+							<td>El gran Gatsby</td>
+							<td>F. Scott Fitzgerald</td>
+							<td>1925</td>
+							<td>Charles Scribner's Sons</td>
+							<td>$10.99</td>
+							<td>4.5</td>
+							<td>Ficción</td>
+							<td>10</td>
+							<td>https://example.com/image1.jpg</td>
+							<td>
+								<table>
+									<tr>
+										<td><i class="fa-solid fa-square-plus fa-lg"></i></td>
+										<td><i class="fa-solid fa-square-minus fa-lg"></i></td>
+										<td><i class="fa-solid fa-pen-to-square fa-lg"></i></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>978-0-439-02349-0</td>
+							<td>Harry Potter y la piedra filosofal</td>
+							<td>J.K. Rowling</td>
+							<td>1997</td>
+							<td>Bloomsbury Publishing</td>
+							<td>$12.99</td>
+							<td>4.8</td>
+							<td>Ficción</td>
+							<td>5</td>
+							<td>https://example.com/image2.jpg</td>
+							<td>
+								<table>
+									<tr>
+										<td><i class="fa-solid fa-square-plus fa-lg"></i></td>
+										<td><i class="fa-solid fa-square-minus fa-lg"></i></td>
+										<td><i class="fa-solid fa-pen-to-square fa-lg"></i></td>									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>743509064</td>
+							<td>Heaven and Earth</td>
+							<td>James Van Praagh</td>
+							<td>2001</td>
+							<td>Sound Ideas</td>
+							<td>$37.95</td>
+							<td>4.0</td>
+							<td>Romance</td>
+							<td>15</td>
+							<td>https://example.com/image3.jpg</td>
+							<td>
+								<table>
+									<tr>
+										<td><i class="fa-solid fa-square-plus fa-lg"></i></td>
+										<td><i class="fa-solid fa-square-minus fa-lg"></i></td>
+										<td><i class="fa-solid fa-pen-to-square fa-lg"></i></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- FIN contenedor del ABM de libros -->
+		</div><!-- FIN main-content-->
+
+			<!--//  footer   //-->
+			<footer>
+				<div id="foo-header">
+				</div>
+				<div id="foo-medio">
+				</div>
+				<div id="foo-footer">
+					<!-- <div class="divisor"></div> -->
+					<div class="foo_small">
+						<p class="footer__small-text"><b>© 2023 El Corazon Delator</b></p>
+						<p class="footer__small-text">Designed and built by Grupo 24 Codo a Codo 2023</p>
+					</div>
+
+				</div>
+			</footer>
+
+
+		</div>
+
+		<!--------------//  script  //-------------------------------->
+		<script src="js/menu.js" type="text/javascript" charset="utf-8" async defer></script>
+		<script src="js/formulario.js"></script>
+		<script src="js/renderImgLibros.js"></script>
+		<!--script>-->
+		<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
